@@ -33,3 +33,7 @@
     border-radius: 4px;
     border: 1px solid gray;
 }
+
+.product-row-count-input:disabled {
+    cursor: not-allowed
+}

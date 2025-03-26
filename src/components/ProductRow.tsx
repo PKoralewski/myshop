@@ -32,6 +32,7 @@ const ProductRow: React.FC<ProductRowProps> = ({ product }) => {
 				<input
 					className='product-row-count-input'
 					type='number'
+					disabled={!product.quantity}
 					value={quantity}
 					min={1}
 					max={product.quantity}

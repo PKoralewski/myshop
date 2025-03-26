@@ -1,17 +1,18 @@
 .cart-btn {
+    background-color: rgba(0, 0, 0, 0.3);
     position: relative;
     border: none;
-    height: 40px;
-    background-color: transparent;
+    height: 50px;
+    border-radius: 10px;
     cursor: pointer;
     transition: filter 0.3s ease-in-out;
 }
 
 .cart-btn p {
     color: #FFF;
-    font-size: 20px;
+    font-size: 30px;
     position: absolute;
-    top: 0;
+    top: -10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
