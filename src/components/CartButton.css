@@ -3,4 +3,9 @@
     height: 40px;
     background-color: transparent;
     cursor: pointer;
+    transition: filter 0.3s ease-in-out;
+}
+
+.cart-btn:hover {
+    filter: brightness(1.2);
 }

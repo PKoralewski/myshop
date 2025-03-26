@@ -1,0 +1,19 @@
+.product-table {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
+}
+
+.product-table th {
+    padding-bottom: 30px;
+}
+
+.product-table tr {
+    text-align: left;
+}
+
+.product-table tr:nth-child(even) td {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}

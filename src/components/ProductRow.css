@@ -1,0 +1,23 @@
+.product-row-image-box {
+    display: flex;
+    align-items: center;
+    margin-left: 7px;
+}
+
+.product-row-buttons-box {
+    display: flex;
+    justify-content: end;
+    gap: 6px
+}
+
+.product-row-buttons-box button {
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 0;
+    transition: filter 0.3s ease-in-out;
+}
+
+.product-row-buttons-box button:hover {
+    filter: brightness(1.5);
+}
