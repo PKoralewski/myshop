@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom"
 
 import "./Layout.css"
-import CartButton from "../components/CartButton"
+import CartButton from "../components/buttons/CartButton"
 
 const Layout = () => {
 	return (

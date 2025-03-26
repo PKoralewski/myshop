@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux"
 
 import "./CartButton.css"
-import CartIcon from "../assets/icons/CartIcon"
-import { RootState } from "../store"
+import CartIcon from "../../assets/icons/CartIcon"
+import { RootState } from "../../store"
 
 const CartButton = () => {
 	const cartProducts = useSelector((state: RootState) => state.cart.products)

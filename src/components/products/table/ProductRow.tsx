@@ -3,10 +3,10 @@ import { useDispatch } from "react-redux"
 
 import "./ProductRow.css"
 import ProductRowProps from "./ProductRowProps"
-import AddToCartIcon from "../assets/icons/AddToCartIcon"
-import ArrowRightIcon from "../assets/icons/ArrowRightIcon"
-import { addToCart } from "../store/CartSlice"
-import { updateQuantity } from "../store/ProductsSlice"
+import AddToCartIcon from "../../../assets/icons/AddToCartIcon"
+import ArrowRightIcon from "../../../assets/icons/ArrowRightIcon"
+import { addToCart } from "../../../store/CartSlice"
+import { updateQuantity } from "../../../store/ProductsSlice"
 
 const ProductRow: React.FC<ProductRowProps> = ({ product }) => {
 	const dispatch = useDispatch()

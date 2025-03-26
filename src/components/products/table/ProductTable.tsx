@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 
 import ProductRow from "./ProductRow"
 import "./ProductTable.css"
-import { RootState } from "../store"
+import { RootState } from "../../../store"
 
 const ProductTable = () => {
 	const products = useSelector((state: RootState) => state.products.products)
