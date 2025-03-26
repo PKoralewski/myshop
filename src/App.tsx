@@ -1,9 +1,14 @@
-import React from "react"
+import { Routes, Route, BrowserRouter } from "react-router-dom"
 
-import "./App.css"
+import HomePage from "./pages/HomePage"
+import Layout from "./layout/Layout"
 
-function App() {
-	return <div className='App'>My shop</div>
-}
-
-export default App
+export const App = () => (
+	<BrowserRouter>
+		<Routes>
+			<Route element={<Layout />}>
+				<Route path='*' element={<HomePage />} />
+			</Route>
+		</Routes>
+	</BrowserRouter>
+)
