@@ -1,12 +1,15 @@
-import { useState } from "react"
+import { useSelector } from "react-redux"
 
 import "./CartButton.css"
 import CartIcon from "../assets/icons/CartIcon"
+import { RootState } from "../store"
 
 const CartButton = () => {
-	const [isEmpty] = useState(false)
+	const cartProducts = useSelector((state: RootState) => state.cart.products)
+
 	return (
-		<button className='cart-btn' style={{ color: isEmpty ? "#B0B0B0" : "#209CEE" }}>
+		<button className='cart-btn' style={{ color: cartProducts.length ? "#209CEE" : "#B0B0B0" }}>
+			<p>{cartProducts.length}</p>
 			<CartIcon />
 		</button>
 	)

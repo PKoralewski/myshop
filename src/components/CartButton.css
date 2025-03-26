@@ -1,9 +1,19 @@
 .cart-btn {
+    position: relative;
     border: none;
     height: 40px;
     background-color: transparent;
     cursor: pointer;
     transition: filter 0.3s ease-in-out;
+}
+
+.cart-btn p {
+    color: #FFF;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .cart-btn:hover {

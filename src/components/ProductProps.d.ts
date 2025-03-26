@@ -3,6 +3,6 @@ export default interface ProductProps {
 	image: string
 	name: string
 	price: number
-	count?: number
+	quantity?: number
 	description?: string
 }
