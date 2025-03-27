@@ -1,0 +1,65 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: white;
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content ul {
+    list-style: none;
+}
+
+.cart-empty-info-btn {
+    display: flex;
+    justify-content: end;
+}
+
+.modal-content button {
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-order-btn,
+.cart-remove-btn,
+.cart-cancel-btn {
+    background-color: #209cee;
+}
+
+.cart-remove-btn,
+.cart-order-btn {
+    background-color: #209cee;
+}
+
+.cart-order-btn:hover,
+.cart-remove-btn:hover {
+    background-color: #1e88b4;
+}
+
+.cart-cancel-btn {
+    background-color: #e74c3c;
+}
+
+.cart-cancel-btn:hover {
+    background-color: #c0392b;
+}
