@@ -1,24 +1,18 @@
 import React from "react"
-import { useDispatch } from "react-redux"
 
 import "./CartItems.css"
-import { removeFromCart } from "../../../store/CartSlice"
 import { CartItemsProps } from "./CartItemsProps"
 import { useUpdateProduct } from "../../../hooks/useUpdateProduct"
-import { CartProductProps } from "../../../store/CartProductProps"
+import { useRemoveCartProduct } from "../../../hooks/useRemoveCartProduct"
 
 const CartItems: React.FC<CartItemsProps> = ({ cartProducts }) => {
-	const dispatch = useDispatch()
 	const updateProduct = useUpdateProduct()
+	const removeProduct = useRemoveCartProduct()
 
-	const handleQuantityChange = (product: CartProductProps, quantity: number, availableQuantity: number) => {
+	const handleQuantityChange = (id: number, quantity: number, availableQuantity: number) => {
 		if (quantity <= 0 || !quantity || quantity > availableQuantity) return
 
-		updateProduct(product, quantity)
-	}
-
-	const handleRemoveFromCart = (id: number) => {
-		dispatch(removeFromCart(id))
+		updateProduct(id, quantity, availableQuantity)
 	}
 
 	return (
@@ -44,7 +38,7 @@ const CartItems: React.FC<CartItemsProps> = ({ cartProducts }) => {
 									value={product.quantity}
 									onChange={(e) =>
 										handleQuantityChange(
-											product,
+											product.id,
 											parseInt(e.target.value),
 											product.availableQuantity,
 										)
@@ -52,7 +46,10 @@ const CartItems: React.FC<CartItemsProps> = ({ cartProducts }) => {
 								/>
 								<p>Max. {product.availableQuantity}</p>
 							</div>
-							<button className='cart-remove-btn' onClick={() => handleRemoveFromCart(product.id)}>
+							<button
+								className='cart-remove-btn'
+								onClick={() => removeProduct(product.id, product.availableQuantity)}
+							>
 								Usuń
 							</button>
 						</div>
