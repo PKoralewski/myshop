@@ -1,54 +1,62 @@
 import React, { useState } from "react"
-import { useDispatch } from "react-redux"
 
 import "./ProductRow.css"
 import ProductRowProps from "./ProductRowProps"
 import AddToCartIcon from "../../../assets/icons/AddToCartIcon"
 import ArrowRightIcon from "../../../assets/icons/ArrowRightIcon"
-import { addToCart } from "../../../store/CartSlice"
-import { updateQuantity } from "../../../store/ProductsSlice"
+import { useNavigate } from "react-router-dom"
+import { useAddToCart } from "../../../hooks/useAddToCart"
 
 const ProductRow: React.FC<ProductRowProps> = ({ product }) => {
-	const dispatch = useDispatch()
 	const [quantity, setQuantity] = useState(1)
+	const addToCart = useAddToCart()
+	const navigate = useNavigate()
 
 	const handleAddToCart = () => {
-		if (product.quantity === 0 || quantity < 1) return
-		dispatch(addToCart({ ...product, quantity }))
-		dispatch(updateQuantity({ id: product.id, quantity }))
-		setQuantity(1)
+		addToCart(product, quantity, setQuantity)
+	}
+
+	const handleNavigateToDetails = () => {
+		navigate(`/product/${product.id}`)
 	}
 
 	return (
-		<tr>
+		<tr className='product-row'>
 			<td>
 				<div className='product-row-image-box'>
-					<img src={product.image} width={"35px"} alt={product.name} />
+					<img src={product.image} alt={product.name} />
 				</div>
 			</td>
-			<td>{product.name}</td>
-			<td>{product.price} zł</td>
 			<td>
-				<input
-					className='product-row-count-input'
-					type='number'
-					disabled={!product.quantity}
-					value={quantity}
-					min={1}
-					max={product.quantity}
-					onChange={(e) => setQuantity(Number(e.target.value))}
-				/>
+				<div className='product-row-name'>{product.name}</div>
+			</td>
+			<td>
+				<div className='product-row-price'>{product.price} zł</div>
+			</td>
+			<td className='product-row-count'>
+				{product.quantity === 0 ? (
+					"Niedostępne"
+				) : (
+					<input
+						className='product-row-count-input'
+						type='number'
+						value={quantity}
+						onChange={(e) => setQuantity(Number(e.target.value))}
+						min={1}
+						max={product.quantity}
+						disabled={product.quantity === 0}
+					/>
+				)}
 			</td>
 			<td>
 				<div className='product-row-buttons-box'>
 					<button
-						disabled={!product.quantity || quantity < 0}
-						style={{ width: 38, height: 38 }}
+						disabled={!product.quantity || quantity < 1 || quantity > product.quantity}
 						onClick={handleAddToCart}
 					>
 						<AddToCartIcon />
 					</button>
-					<button style={{ width: 38, height: 38 }}>
+					<button onClick={handleNavigateToDetails}>
 						<ArrowRightIcon />
 					</button>
 				</div>

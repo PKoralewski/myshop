@@ -1,9 +1,9 @@
-import ProductRow from "./ProductRow"
 import "./ProductTable.css"
+import ProductRow from "./ProductRow"
 import { useProductPagination } from "../../../hooks/useProductPagination"
 
 const ProductTable = () => {
-	const { currentProducts, currentPage, totalPages, nextPage, prevPage } = useProductPagination(1)
+	const { currentProducts, currentPage, totalPages, nextPage, prevPage } = useProductPagination(5)
 
 	return (
 		<div className='product-table-container'>
