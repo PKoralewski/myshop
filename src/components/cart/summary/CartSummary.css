@@ -29,3 +29,26 @@
     background-color: rgba(0, 0, 0, 0.2);
     cursor: not-allowed;
 }
+
+@media (max-width: 768px) {
+    .cart-summary {
+        align-items: center;
+    }
+
+    .cart-sum {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .cart-buttons-box {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .cart-buttons-box button {
+        width: 100%;
+        padding: 12px;
+    }
+}

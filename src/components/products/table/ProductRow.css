@@ -59,3 +59,28 @@
 .product-row-buttons-box button:hover {
     filter: brightness(1.2);
 }
+
+@media (max-width: 768px) {
+    .product-row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-row td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        border-bottom: none;
+    }
+
+    .product-row-buttons-box {
+        justify-content: center;
+    }
+
+    .product-row-count input {
+        width: 100%;
+        max-width: 60px;
+    }
+}

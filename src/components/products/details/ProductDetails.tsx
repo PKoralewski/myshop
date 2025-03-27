@@ -17,7 +17,7 @@ const ProductDetails = ({ product }: { product: ProductProps }) => {
 		<div className='product-details'>
 			<h1>{product.name}</h1>
 			<div className='product-image'>
-				<img src={product.image} alt={product.name} width={200} />
+				<img src={product.image} alt={product.name} />
 			</div>
 			<p className='product-description'>{product.description}</p>
 			<div className='product-details-info'>

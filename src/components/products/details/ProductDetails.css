@@ -19,6 +19,11 @@
     margin-bottom: 20px;
 }
 
+.product-image img {
+    width: 100%;
+    max-width: 200px;
+}
+
 .product-description {
     font-size: 1.1rem;
     color: #666;
@@ -88,4 +93,86 @@
 
 .add-to-cart-button:hover:not(:disabled) {
     background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .product-details {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .product-details h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .product-image img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+    }
+
+    .product-description {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .product-details-info {
+        padding: 15px;
+    }
+
+    .product-price {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .product-quantity {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .quantity-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .quantity-box label {
+        margin-right: 0;
+    }
+
+    .add-to-cart-button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-details {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .product-details h1 {
+        font-size: 1.3rem;
+    }
+
+    .product-image img {
+        max-width: 100px;
+    }
+
+    .product-price {
+        font-size: 1.2rem;
+    }
+
+    .quantity-box input {
+        width: 60px;
+        font-size: 0.9rem;
+    }
+
+    .add-to-cart-button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }

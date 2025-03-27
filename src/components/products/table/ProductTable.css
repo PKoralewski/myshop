@@ -69,3 +69,54 @@
 .product-pagination button:hover:not(:disabled) {
     background-color: #2980b9;
 }
+
+@media (max-width: 768px) {
+    .product-table-container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .product-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .product-table thead {
+        display: none;
+    }
+
+    .product-table tbody,
+    .product-table tr,
+    .product-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .product-table tr {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .product-table td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .product-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .product-pagination {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

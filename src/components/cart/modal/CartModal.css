@@ -63,3 +63,15 @@
 .cart-cancel-btn:hover {
     background-color: #c0392b;
 }
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        max-height: 90%;
+        padding: 15px;
+    }
+
+    .cart-empty-info-btn {
+        justify-content: center;
+    }
+}
