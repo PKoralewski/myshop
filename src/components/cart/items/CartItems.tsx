@@ -2,7 +2,7 @@ import React from "react"
 import { useDispatch } from "react-redux"
 
 import "./CartItems.css"
-import { removeFromCart, updateQuantity } from "../../store/CartSlice"
+import { removeFromCart, updateQuantity } from "../../../store/CartSlice"
 import { CartItemsProps } from "./CartItemsProps"
 
 const CartItems: React.FC<CartItemsProps> = ({ cartProducts }) => {

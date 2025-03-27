@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux"
 
 import "./CartModal.css"
 import { CartModalProps } from "./CartModalProps"
-import { clearCart } from "../../store/CartSlice"
-import CartItems from "./CartItems"
-import CartSummary from "./CartSummary"
+import { clearCart } from "../../../store/CartSlice"
+import CartItems from "../items/CartItems"
+import CartSummary from "../summary/CartSummary"
 
 const CartModal: React.FC<CartModalProps> = ({ onClose, cartProducts }) => {
 	const dispatch = useDispatch()

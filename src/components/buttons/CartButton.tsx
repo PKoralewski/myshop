@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { useSelector } from "react-redux"
 
+import "./CartButton.css"
 import { RootState } from "../../store"
 import CartIcon from "../../assets/icons/CartIcon"
-import "./CartButton.css"
-import CartModal from "../cart/CartModal"
+import CartModal from "../cart/modal/CartModal"
 
 const CartButton = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
