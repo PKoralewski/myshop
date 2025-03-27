@@ -7,9 +7,9 @@ const AddToCartIcon = () => {
 			xmlnsXlink='http://www.w3.org/1999/xlink'
 			x='0px'
 			y='0px'
-			width='100%'
-			viewBox='0 0 352 352'
-			enableBackground='new 0 0 352 352'
+			width='25px'
+			viewBox='70 55 243 243'
+			enableBackground='new 0 0 243 243'
 			xmlSpace='preserve'
 		>
 			<path

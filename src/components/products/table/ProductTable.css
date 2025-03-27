@@ -15,19 +15,25 @@
     table-layout: fixed;
     border-spacing: 0;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.15);
-    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.07);
+    margin-bottom: 20px;
 }
+
+.product-table th,
+.product-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-table tr:last-child td {
+    border-bottom: none;
+}
+
 
 .product-table thead {
-    color: #fff;
-    background-color: #333;
-    height: 50px;
-}
-
-.product-table thead th {
-    padding: 10px 15px;
-    font-size: 1.1rem;
+    background-color: #333333;
+    color: #FFF;
 }
 
 .product-table thead th:nth-child(1) {
@@ -36,11 +42,6 @@
 
 .product-table thead th:nth-child(5) {
     border-top-right-radius: 10px;
-}
-
-.product-table td {
-    padding: 12px;
-    font-size: 1rem;
 }
 
 .product-pagination {

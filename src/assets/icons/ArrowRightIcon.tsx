@@ -1,6 +1,6 @@
 const ArrowRightIcon = () => {
 	return (
-		<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 -2 24 24' width='1.5em' height='1.5em'>
+		<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 -1 24 24' width='1.5em' height='1.5em'>
 			<path
 				fill='none'
 				stroke='currentColor'
