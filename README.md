@@ -7,9 +7,9 @@ Projekt został wygenerowany przy pomocy `create-react-app`.
 
 ## Funkcjonalności
 
-- **Nagłówek strony** zawierający logo/tytuł oraz przycisk koszyka, który zmienia kolor, gdy zostaną dodane produkty.
+- **Nagłówek strony** zawierający tytuł oraz przycisk koszyka, który zmienia kolor, gdy zostaną dodane produkty.
 - **Lista produktów** z paginacją, gdzie każdy element zawiera:
-  - Zdjęcie (losowe obrazki),
+  - Zdjęcie,
   - Nazwę,
   - Cenę,
   - Przycisk z ikoną SVG dodający produkt do koszyka.
