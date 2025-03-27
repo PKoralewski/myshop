@@ -11,7 +11,7 @@ const CartSummary: React.FC<CartSummaryProps> = ({ cartProducts, onClearCart, on
 			<p>Podsumowanie:</p>
 			<div className='cart-sum'>
 				<p>Suma:</p>
-				<p className='cart-price-summary'>{totalPrice} zł</p>
+				<p className='cart-price-summary'>{totalPrice ? totalPrice : 0} zł</p>
 			</div>
 			<div className='cart-buttons-box'>
 				<button className='cart-order-btn' onClick={onClearCart}>

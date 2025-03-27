@@ -12,14 +12,18 @@ const cartSlice = createSlice({
 	initialState,
 	reducers: {
 		addToCart: (state, action: PayloadAction<CartItemProps>) => {
-			const existingItem = state.products.find((item) => item.id === action.payload.id)
+			const existingItem = state.products.find((item) => item.id === action.payload.product.id)
 
 			if (existingItem) {
 				existingItem.quantity += action.payload.quantity
 				return
 			}
 
-			state.products.push(action.payload)
+			state.products.push({
+				...action.payload.product,
+				quantity: action.payload.quantity,
+				availableQuantity: action.payload.product.quantity,
+			})
 		},
 		removeFromCart: (state, action: PayloadAction<number>) => {
 			state.products = state.products.filter((item) => item.id !== action.payload)

@@ -1,5 +1,5 @@
-import ProductProps from "../../products/shared/ProductProps"
+import { CartProductProps } from "../../../store/CartProductProps"
 
 export interface CartItemsProps {
-	cartProducts: ProductProps[]
+	cartProducts: CartProductProps[]
 }

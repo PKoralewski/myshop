@@ -10,14 +10,17 @@ const ProductDetails = ({ product }: { product: ProductProps }) => {
 	const addToCart = useAddToCart()
 
 	const handleAddToCart = () => {
-		addToCart(product, quantity, setQuantity)
+		if (product.quantity === 0 || quantity < 1) return
+
+		addToCart(product, quantity)
+		setQuantity(1)
 	}
 
 	return (
 		<div className='product-details'>
 			<h1>{product.name}</h1>
 			<div className='product-image'>
-				<img src={product.image} alt={product.name} />
+				<img src={require(`../../../assets/images/${product.image}`)} alt={product.name} />
 			</div>
 			<p className='product-description'>{product.description}</p>
 			<div className='product-details-info'>
@@ -38,7 +41,7 @@ const ProductDetails = ({ product }: { product: ProductProps }) => {
 				<button
 					className='add-to-cart-button'
 					onClick={handleAddToCart}
-					disabled={product.quantity === 0 || quantity < 1}
+					disabled={product.quantity === 0 || quantity < 1 || quantity > product.quantity}
 				>
 					Dodaj do koszyka
 				</button>

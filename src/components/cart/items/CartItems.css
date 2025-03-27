@@ -26,6 +26,17 @@
     gap: 15px;
 }
 
+.cart-item-actions p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.cart-quantity-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
 .cart-item-actions input {
     width: 60px;
     height: 20px;

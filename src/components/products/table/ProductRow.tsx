@@ -13,7 +13,10 @@ const ProductRow: React.FC<ProductRowProps> = ({ product }) => {
 	const navigate = useNavigate()
 
 	const handleAddToCart = () => {
-		addToCart(product, quantity, setQuantity)
+		if (product.quantity === 0 || quantity < 1) return
+
+		addToCart(product, quantity)
+		setQuantity(1)
 	}
 
 	const handleNavigateToDetails = () => {
@@ -24,7 +27,7 @@ const ProductRow: React.FC<ProductRowProps> = ({ product }) => {
 		<tr className='product-row'>
 			<td>
 				<div className='product-row-image-box'>
-					<img src={product.image} alt={product.name} />
+					<img src={require(`../../../assets/images/${product.image}`)} alt={product.name} />
 				</div>
 			</td>
 			<td>
@@ -37,15 +40,18 @@ const ProductRow: React.FC<ProductRowProps> = ({ product }) => {
 				{product.quantity === 0 ? (
 					"Niedostępne"
 				) : (
-					<input
-						className='product-row-count-input'
-						type='number'
-						value={quantity}
-						onChange={(e) => setQuantity(Number(e.target.value))}
-						min={1}
-						max={product.quantity}
-						disabled={product.quantity === 0}
-					/>
+					<>
+						<input
+							className='product-row-count-input'
+							type='number'
+							value={quantity}
+							onChange={(e) => setQuantity(Number(e.target.value))}
+							min={1}
+							max={product.quantity}
+							disabled={product.quantity === 0}
+						/>
+						<p>Max. {product.quantity}</p>
+					</>
 				)}
 			</td>
 			<td>

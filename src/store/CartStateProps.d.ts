@@ -1,5 +1,5 @@
-import { CartItemProps } from "./CartItemProps"
+import { CartProductProps } from "./CartProductProps"
 
 export interface CartStateProps {
-	products: CartItemProps[]
+	products: CartProductProps[]
 }

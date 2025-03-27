@@ -1,6 +1,6 @@
-import ProductProps from "../../products/shared/ProductProps"
+import { CartProductProps } from "../../../store/CartProductProps"
 
 export interface CartModalProps {
 	onClose: () => void
-	cartProducts: ProductProps[]
+	cartProducts: CartProductProps[]
 }

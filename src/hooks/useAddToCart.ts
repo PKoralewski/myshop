@@ -7,17 +7,9 @@ import { updateQuantity } from "../store/ProductsSlice"
 export const useAddToCart = () => {
 	const dispatch = useDispatch()
 
-	const addProductToCart = (
-		product: ProductProps,
-		quantity: number,
-		setQuantity: React.Dispatch<React.SetStateAction<number>>,
-	) => {
-		if (product.quantity === 0 || quantity < 1) return
-		console.log(quantity)
-
-		dispatch(addToCart({ ...product, quantity }))
-		dispatch(updateQuantity({ id: product.id, quantity }))
-		setQuantity(1)
+	const addProductToCart = (product: ProductProps, quantity: number) => {
+		dispatch(addToCart({ product, quantity }))
+		dispatch(updateQuantity({ id: product.id, quantity: product.quantity - quantity }))
 	}
 
 	return addProductToCart
