@@ -28,14 +28,28 @@ Projekt został wygenerowany przy pomocy `create-react-app`.
 ## Dodatkowe informacje
 
 - Kliknięcie w koszyk otwiera **modal** z jego zawartością.
-- Kliknięcie w ikone podglądu na liście przenosi do **widoku podglądu**.
+- Kliknięcie w ikonę podglądu na liście przenosi do **widoku podglądu**.
 - **TypeScript** używany w całym projekcie.
 - **Skupiono się na React**, a nie na wyglądzie aplikacji.
 - Zastosowano składnię **ES6**,
 - Wykorzystano metody cyklu życia komponentów,
 - Użyto **funkcyjnych** komponentów,
 - Użyto **Higher-Order Components**,
-- Stworzono Hooki Reacta
+- Stworzono Hooki Reacta.
+
+## Instalacja i uruchomienie
+
+Aby uruchomić projekt lokalnie:
+
+1. **Otwórz terminal lub wiersz poleceń**.
+2. **Przejdź do katalogu repozytorium**.
+3. **Zainstaluj zależności**:
+npm install
+
+4. **Uruchom aplikację**:
+npm start
+
+Aplikacja będzie dostępna pod adresem **https://shop.local:3000**.
 
 ## Konfiguracja hosta
 
@@ -45,23 +59,23 @@ Jeśli pojawi się problem z hostem, trzeba dodać wpis w pliku `hosts`:
 
 1. Otwórz **Notatnik jako administrator**.
 2. Otwórz plik:  
-   `C:\Windows\System32\drivers\etc\hosts`
+`C:\Windows\System32\drivers\etc\hosts`
+
 3. Dodaj na końcu:
-   ```
-   127.0.0.1 shop.local
-   ```
+127.0.0.1 shop.local
+
+
 
 ### Linux / Mac
 
 1. Otwórz terminal.
 2. Edytuj plik `/etc/hosts`:
-   ```sh
-   sudo nano /etc/hosts
-   ```
+sudo nano /etc/hosts
+
 3. Dodaj na końcu:
-   ```
-   127.0.0.1 shop.local
-   ```
+127.0.0.1 shop.local
+
+
 4. Zapisz zmiany (`Ctrl + X`, potem `Y` i `Enter`).
 5. Zrestartuj przeglądarkę lub wyczyść DNS (`sudo dscacheutil -flushcache` na Mac).
 
